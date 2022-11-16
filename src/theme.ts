@@ -8,6 +8,12 @@ const colors = {
   },
 };
 
+const components = {
+  Divider: {
+    size: "3px",
+  },
+};
+
 const fonts = {
   heading: "'Roboto Mono',cursive;",
   body: "'Roboto Mono','Kiwi Maru','monospace',serif;",
@@ -18,6 +24,7 @@ const textStyles = {
     letterSpacing: "0.15rem",
   },
   h2: {
+    position: "relative",
     letterSpacing: "0.2rem",
     size: "xl",
     noOfLines: 1,
@@ -37,5 +44,5 @@ const styles = {
   },
 };
 
-const theme = extendTheme({ textStyles, styles, colors, fonts });
+const theme = extendTheme({ components, textStyles, styles, colors, fonts });
 export default theme;
