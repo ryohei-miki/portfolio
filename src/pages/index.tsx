@@ -1,22 +1,18 @@
 import {
-  Box,
-  Container,
   Avatar,
-  Heading,
-  Text,
-  Flex,
-  keyframes,
-  Stack,
-  HStack,
-  VStack,
-  Divider,
+  Box,
   Card,
   CardBody,
+  Divider,
+  Heading,
+  HStack,
   Image,
+  keyframes,
   Link,
+  Stack,
+  Text,
+  VStack,
 } from "@chakra-ui/react";
-import Head from "next/head";
-// import Image from "next/image";
 import GitHubIcon from "../../public/images/github.svg";
 import TwitterIcon from "../../public/images/twitter.svg";
 import ZennIcon from "../../public/images/zenn.svg";
