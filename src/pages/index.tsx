@@ -16,6 +16,7 @@ import {
 import Head from "next/head";
 // import Image from "next/image";
 import theme from "../theme";
+
 const flash = keyframes`
   0% { opacity: 1; }
   50% { opacity: 0; }
@@ -27,7 +28,7 @@ const animation = `${flash} 1.5s linear infinite`;
 export default function Home() {
   return (
     <>
-      <Box textAlign="center" mt={10}>
+      <Box textAlign="center">
         <Heading
           as="h1"
           textStyle="h1"
@@ -36,7 +37,7 @@ export default function Home() {
           _before={{ content: `"$"`, color: "#C778DD", paddingRight: "3" }}
           _after={{ content: `"_"`, paddingLeft: "2", animation }}
         >
-          Rohei Miki`s Portfolio
+          RM Portfolio
         </Heading>
       </Box>
       <Box textAlign="center" mt={12}>
@@ -51,11 +52,12 @@ export default function Home() {
           <Heading
             as="h2"
             textStyle="h2"
+            fontSize="3xl"
             _before={{ content: `"/"`, color: "#E43777", paddingRight: "3" }}
           >
             About
           </Heading>
-          <Text mt="4" fontSize="xl">
+          <Text mt="4" fontSize="lg">
             こんにちは三木っていいます。よろしくお願いします。 いい天気ですね。
             こんにちは三木っていいます。よろしくお願いします。 いい天気ですね。
             こんにちは三木っていいます。よろしくお願いします。 いい天気ですね。
@@ -66,6 +68,7 @@ export default function Home() {
             <Heading
               as="h2"
               textStyle="h2"
+              fontSize="2xl"
               _before={{ content: `"#"`, color: "#7CDBCB", paddingRight: "3" }}
               _after={{
                 position: "absolute",
@@ -73,13 +76,13 @@ export default function Home() {
                 right: 0,
                 content: `""`,
                 height: "1px",
-                width: "38vw",
+                width: { base: "0px", sm: "40%" },
                 backgroundColor: "#7CDBCB",
               }}
             >
               Job
             </Heading>
-            <Text mt="4" fontSize="xl">
+            <Text mt="4" fontSize="lg">
               フロントエンドエンジニア
             </Text>
           </Box>
@@ -87,6 +90,7 @@ export default function Home() {
             <Heading
               as="h2"
               textStyle="h2"
+              fontSize="2xl"
               _before={{ content: `"#"`, color: "#7CDBCB", paddingRight: "3" }}
               _after={{
                 position: "absolute",
@@ -94,13 +98,13 @@ export default function Home() {
                 right: 0,
                 content: `""`,
                 height: "1px",
-                width: "38vw",
+                width: { base: "0px", sm: "40%" },
                 backgroundColor: "#7CDBCB ",
               }}
             >
               Favolite
             </Heading>
-            <Text mt="4" fontSize="xl">
+            <Text mt="4" fontSize="lg">
               ピアノ,neko
             </Text>
           </Box>
@@ -108,6 +112,7 @@ export default function Home() {
             <Heading
               as="h2"
               textStyle="h2"
+              fontSize="2xl"
               _before={{ content: `"#"`, color: "#7CDBCB", paddingRight: "3" }}
               _after={{
                 position: "absolute",
@@ -115,7 +120,7 @@ export default function Home() {
                 right: 0,
                 content: `""`,
                 height: "1px",
-                width: "38vw",
+                width: { base: "0px", sm: "40%" },
                 backgroundColor: "#7CDBCB",
               }}
             >
@@ -133,25 +138,26 @@ export default function Home() {
           <Heading
             as="h2"
             textStyle="h2"
+            fontSize="3xl"
             _before={{ content: `"/"`, color: "#574EC1", paddingRight: "3" }}
           >
             Work
           </Heading>
-          <Text mt="4" fontSize="xl">
+          <Text mt="4" fontSize="lg">
             自分が作成したいろいろなものを載せていく予定です。
             自分が作成したいろいろなものを載せていく予定です。
             自分が作成したいろいろなものを載せていく予定です。
           </Text>
         </Box>
-        <VStack pt="8">
-          <Card maxW="xl">
-            <CardBody>
+        <VStack pt="8" spacing={20}>
+          <Card>
+            <CardBody p={0}>
               <Image
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt="Green double couch with wooden legs"
                 borderRadius="sm"
               />
-              <Stack mt="6" spacing="3">
+              <Stack mt="6">
                 <Heading size="md" color={"#fff"}>
                   Living room Sofa
                 </Heading>
@@ -163,14 +169,14 @@ export default function Home() {
               </Stack>
             </CardBody>
           </Card>
-          <Card maxW="xl">
-            <CardBody>
+          <Card>
+            <CardBody p={0}>
               <Image
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt="Green double couch with wooden legs"
                 borderRadius="sm"
               />
-              <Stack mt="6" spacing="3">
+              <Stack mt="6">
                 <Heading size="md" color={"#fff"}>
                   Living room Sofa
                 </Heading>
@@ -184,6 +190,9 @@ export default function Home() {
           </Card>
         </VStack>
       </VStack>
+      <Box as="footer" mt={20} textAlign="center" fontSize="sm">
+        <Text>© 2022 Ryohei Miki. All Rights Reserved.</Text>
+      </Box>
     </>
   );
 }
