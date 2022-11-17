@@ -7,14 +7,20 @@ import {
   Flex,
   keyframes,
   Stack,
+  HStack,
   VStack,
   Divider,
   Card,
   CardBody,
   Image,
+  Link,
 } from "@chakra-ui/react";
 import Head from "next/head";
 // import Image from "next/image";
+import GitHubIcon from "../../public/images/github.svg";
+import TwitterIcon from "../../public/images/twitter.svg";
+import ZennIcon from "../../public/images/zenn.svg";
+
 import theme from "../theme";
 
 const flash = keyframes`
@@ -42,10 +48,30 @@ export default function Home() {
       </Box>
       <Box textAlign="center" mt={12}>
         <Avatar
-          size="2xl"
+          w={40}
+          h={40}
           name="Dan Abrahmov"
           src="https://bit.ly/dan-abramov"
         />
+        <HStack spacing={8} justifyContent="center" mt="8">
+          <Link
+            href="https://github.com/RyoheiMiki"
+            isExternal
+            _hover={{ opacity: 0.6 }}
+          >
+            <GitHubIcon width={32} height={32} />
+          </Link>
+          <Link
+            href="https://twitter.com/rm_oshushi"
+            isExternal
+            _hover={{ opacity: 0.6 }}
+          >
+            <TwitterIcon width={32} height={32} />
+          </Link>
+          <Link href="https://zenn.dev/rm" isExternal _hover={{ opacity: 0.6 }}>
+            <ZennIcon width={32} height={32} />
+          </Link>
+        </HStack>
       </Box>
       <VStack as="section" align="flex-start">
         <Box mt={12}>
