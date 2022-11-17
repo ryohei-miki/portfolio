@@ -1,4 +1,4 @@
-import { ChakraProvider, Box, Center, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import theme from "../theme";
@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400&family=Oxanium:wght@600;700&family=Roboto+Mono:ital,wght@0,400;1,300&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700&family=Roboto+Mono:ital,wght@0,400;1,300&family=Sawarabi+Gothic&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -16,9 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <Box
           maxW="786px"
           minH="100vh"
-          border={"1px solid white"}
           mx="auto"
           p={10}
+          backgroundColor="#1E1E1E"
+          boxShadow="0px 5px 15px 0px rgba(0, 0, 0, 0.35)"
         >
           <Component {...pageProps} />
         </Box>

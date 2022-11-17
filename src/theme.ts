@@ -16,7 +16,7 @@ const components = {
 
 const fonts = {
   heading: "'Roboto Mono',cursive;",
-  body: "'Roboto Mono','Kiwi Maru','monospace',serif;",
+  body: "'Roboto Mono','Sawarabi Gothic','monospace',sans-serif;",
 };
 
 const textStyles = {
@@ -26,7 +26,6 @@ const textStyles = {
   h2: {
     position: "relative",
     letterSpacing: "0.2rem",
-    size: "xl",
     noOfLines: 1,
   },
   headingPrefix: {
@@ -38,7 +37,7 @@ const textStyles = {
 const styles = {
   global: {
     body: {
-      backgroundColor: "#1E1E1E",
+      backgroundColor: "#191919",
       color: "#ffffff",
     },
   },
