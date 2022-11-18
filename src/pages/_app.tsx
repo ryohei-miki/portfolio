@@ -6,6 +6,9 @@ import theme from "theme";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <title>RM Portfolio</title>
+      </Head>
       <ChakraProvider theme={theme}>
         <Box
           maxW="786px"
