@@ -12,10 +12,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-
 import { snsData, introData, worksData } from "data";
 import { flashAnimation } from "styles/animation";
-import theme from "theme";
 
 export default function Home() {
   return (
