@@ -7,7 +7,6 @@ import {
   Heading,
   HStack,
   Image,
-  keyframes,
   Link,
   Stack,
   Text,
@@ -16,14 +15,7 @@ import {
 
 import theme from "../theme";
 import { snsData, introData, worksData } from "data";
-
-const flash = keyframes`
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1;}
-`;
-
-const animation = `${flash} 1.5s linear infinite`;
+import { flashAnimation } from "styles/animation";
 
 export default function Home() {
   return (
@@ -35,7 +27,11 @@ export default function Home() {
           fontFamily={"'Oxanium',cursive;"}
           fontSize="3xl"
           _before={{ content: `"$"`, color: "#C778DD", paddingRight: "3" }}
-          _after={{ content: `"_"`, paddingLeft: "2", animation }}
+          _after={{
+            content: `"_"`,
+            paddingLeft: "2",
+            animation: flashAnimation,
+          }}
         >
           RM Portfolio
         </Heading>
@@ -49,7 +45,12 @@ export default function Home() {
         />
         <HStack spacing={8} justifyContent="center" mt="8">
           {snsData.map((item) => (
-            <Link href={item.url} key={item.url} _hover={{ opacity: 0.6 }}>
+            <Link
+              href={item.url}
+              key={item.url}
+              _hover={{ opacity: 0.6 }}
+              isExternal
+            >
               {item.icon}
             </Link>
           ))}

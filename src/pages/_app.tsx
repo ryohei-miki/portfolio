@@ -6,12 +6,6 @@ import theme from "theme";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700&family=Roboto+Mono:ital,wght@0,400;1,300&family=Sawarabi+Gothic&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <ChakraProvider theme={theme}>
         <Box
           maxW="786px"
