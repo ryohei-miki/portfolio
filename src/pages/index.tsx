@@ -13,9 +13,9 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-import theme from "../theme";
 import { snsData, introData, worksData } from "data";
 import { flashAnimation } from "styles/animation";
+import theme from "theme";
 
 export default function Home() {
   return (
@@ -26,7 +26,11 @@ export default function Home() {
           textStyle="h1"
           fontFamily={"'Oxanium',cursive;"}
           fontSize="3xl"
-          _before={{ content: `"$"`, color: "#C778DD", paddingRight: "3" }}
+          _before={{
+            content: `"$"`,
+            color: "org.purple",
+            paddingRight: "3",
+          }}
           _after={{
             content: `"_"`,
             paddingLeft: "2",
@@ -62,7 +66,7 @@ export default function Home() {
             as="h2"
             textStyle="h2"
             fontSize="3xl"
-            _before={{ content: `"/"`, color: "#E43777", paddingRight: "3" }}
+            _before={{ content: `"/"`, color: "org.red", paddingRight: "3" }}
           >
             About
           </Heading>
@@ -83,7 +87,7 @@ export default function Home() {
                   fontSize="2xl"
                   _before={{
                     content: `"#"`,
-                    color: "#7CDBCB",
+                    color: "org.cyan",
                     paddingRight: "3",
                   }}
                   _after={{
@@ -93,7 +97,7 @@ export default function Home() {
                     content: `""`,
                     height: "1px",
                     width: { base: "0px", sm: "40%" },
-                    backgroundColor: "#7CDBCB",
+                    backgroundColor: "org.cyan",
                   }}
                 >
                   {item.title}
@@ -113,7 +117,7 @@ export default function Home() {
             as="h2"
             textStyle="h2"
             fontSize="3xl"
-            _before={{ content: `"/"`, color: "#574EC1", paddingRight: "3" }}
+            _before={{ content: `"/"`, color: "org.navy", paddingRight: "3" }}
           >
             Work
           </Heading>
@@ -131,10 +135,10 @@ export default function Home() {
                   borderRadius="sm"
                 />
                 <Stack mt="6">
-                  <Heading size="md" color={"#fff"}>
+                  <Heading size="md" color={"white"}>
                     {item.title}
                   </Heading>
-                  <Text color={"#fff"}>{item.text}</Text>
+                  <Text color={"white"}>{item.text}</Text>
                 </Stack>
               </CardBody>
             </Card>
