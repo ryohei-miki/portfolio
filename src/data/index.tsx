@@ -19,16 +19,16 @@ export const snsData = [
 
 export const introData = [
   {
-    title: "Job",
-    text: "フロントエンドエンジニア",
-  },
-  {
-    title: "Favolite",
-    text: "ピアノ,neko",
-  },
-  {
     title: "Skill",
-    text: "React, Next.js, ruby, Ruby on Rails",
+    text: "Javascript, React, Next.js, ruby, Ruby on Rails",
+  },
+  {
+    title: "Device",
+    text: "M2 MacBook Air, HUAWEI MateView GT 34インチ, HHKB Professional HYBRID Type-S, Magic Trackpad",
+  },
+  {
+    title: "Like",
+    text: "ピアノ、BUMP OF CHIKEN、League of Legends、猫🐈‍⬛🐈‍⬛🐈‍⬛",
   },
 ];
 

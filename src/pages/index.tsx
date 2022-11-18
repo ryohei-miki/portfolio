@@ -66,10 +66,11 @@ export default function Home() {
           >
             About
           </Heading>
-          <Text mt="4" fontSize="lg">
-            こんにちは三木っていいます。よろしくお願いします。 いい天気ですね。
-            こんにちは三木っていいます。よろしくお願いします。 いい天気ですね。
-            こんにちは三木っていいます。よろしくお願いします。 いい天気ですね。
+          <Text mt="4" fontSize="lg" lineHeight={1.8}>
+            こんにちは！はじめまして、三木と申します！名古屋に在住してます🏠
+            <br />
+            普段はエンジニアとして、SaaSのプロダクトの開発を行なっています。
+            主な関心、興味はフロントエンドにありますが固執しすぎず、幅広く学習していきたいと思っています📚
           </Text>
         </Box>
         <Box pl={12} width="100%">
@@ -106,7 +107,7 @@ export default function Home() {
         </Box>
       </VStack>
       <Divider textAlign="center" m={"6rem auto 3rem auto"} width={40} />
-      <VStack as="section">
+      <VStack as="section" alignItems="left">
         <Box mt={12}>
           <Heading
             as="h2"
@@ -116,10 +117,8 @@ export default function Home() {
           >
             Work
           </Heading>
-          <Text mt="4" fontSize="lg">
-            自分が作成したいろいろなものを載せていく予定です。
-            自分が作成したいろいろなものを載せていく予定です。
-            自分が作成したいろいろなものを載せていく予定です。
+          <Text mt="4" mb="6" fontSize="lg">
+            日々のアウトプットの成果物をここに載せていく予定です。
           </Text>
         </Box>
         <VStack pt="8" spacing={20}>
