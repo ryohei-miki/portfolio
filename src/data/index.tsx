@@ -38,7 +38,7 @@ export const worksData = [
     text: "This sofa is perfect for modern tropical spaces, baroque inspired spaces, earthy toned spaces and for people who love a chic design with a sprinkle of vintage design.",
   },
   {
-    title: "Living room Sofa",
+    title: "Living room Sofa2",
     text: "This sofa is perfect for modern tropical spaces, baroque inspired spaces, earthy toned spaces and for people who love a chic design with a sprinkle of vintage design.",
   },
 ];
