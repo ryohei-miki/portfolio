@@ -1,19 +1,17 @@
-import GitHubIcon from "../../public/images/github.svg";
-import TwitterIcon from "../../public/images/twitter.svg";
-import ZennIcon from "../../public/images/zenn.svg";
+import { SiGithub, SiTwitter, SiZenn } from "react-icons/si";
 
 export const snsData = [
   {
     url: "https://github.com/RyoheiMiki",
-    icon: <GitHubIcon width={32} height={32} />,
+    icon: <SiGithub size={26} />,
   },
   {
     url: "https://twitter.com/rm_oshushi",
-    icon: <TwitterIcon width={32} height={32} />,
+    icon: <SiTwitter size={26} />,
   },
   {
     url: "https://zenn.dev/rm",
-    icon: <ZennIcon width={32} height={32} />,
+    icon: <SiZenn size={26} />,
   },
 ];
 
