@@ -7,12 +7,12 @@ import {
   Heading,
   HStack,
   Image,
-  Link,
   Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { snsData, introData, worksData } from "data";
+import { SnsLinks } from "components/Sns";
+import { introData, worksData } from "data";
 import { flashAnimation } from "styles/animation";
 
 export default function Home() {
@@ -46,16 +46,7 @@ export default function Home() {
           src="https://bit.ly/dan-abramov"
         />
         <HStack spacing={8} justifyContent="center" mt="8">
-          {snsData.map((item) => (
-            <Link
-              href={item.url}
-              key={item.url}
-              _hover={{ opacity: 0.6 }}
-              isExternal
-            >
-              {item.icon}
-            </Link>
-          ))}
+          <SnsLinks />
         </HStack>
       </Box>
       <VStack as="section" align="flex-start">
