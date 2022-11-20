@@ -1,20 +1,3 @@
-import { SiGithub, SiTwitter, SiZenn } from "react-icons/si";
-
-export const snsData = [
-  {
-    url: "https://github.com/RyoheiMiki",
-    icon: <SiGithub size={26} />,
-  },
-  {
-    url: "https://twitter.com/rm_oshushi",
-    icon: <SiTwitter size={26} />,
-  },
-  {
-    url: "https://zenn.dev/rm",
-    icon: <SiZenn size={26} />,
-  },
-];
-
 export const introData = [
   {
     title: "Skill",
