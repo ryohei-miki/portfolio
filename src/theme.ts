@@ -32,6 +32,26 @@ const theme = extendTheme({
       position: "relative",
       letterSpacing: "0.2rem",
       noOfLines: 1,
+      _before: { content: `"/"`, color: "org.red", paddingRight: "3" },
+    },
+    h3: {
+      position: "relative",
+      letterSpacing: "0.2rem",
+      fontSize: "2xl",
+      _before: {
+        content: `"#"`,
+        color: "org.cyan",
+        paddingRight: "3",
+      },
+      _after: {
+        position: "absolute",
+        top: "calc(50% - 1px)",
+        right: 0,
+        content: `""`,
+        height: "1px",
+        width: { base: "0px", sm: "40%" },
+        backgroundColor: "org.cyan",
+      },
     },
     headingPrefix: {
       color: "#C778DD",
