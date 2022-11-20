@@ -11,7 +11,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { SnsLinks } from "components/Sns";
+import { SnsLinks } from "components/SnsLinks";
 import { introData, worksData } from "data";
 import { flashAnimation } from "styles/animation";
 
@@ -27,11 +27,11 @@ export default function Home() {
           _before={{
             content: `"$"`,
             color: "org.purple",
-            paddingRight: "3",
+            pr: "4",
           }}
           _after={{
             content: `"_"`,
-            paddingLeft: "2",
+            pl: "2",
             animation: flashAnimation,
           }}
         >
@@ -51,12 +51,7 @@ export default function Home() {
       </Box>
       <VStack as="section" align="flex-start">
         <Box mt={12}>
-          <Heading
-            as="h2"
-            textStyle="h2"
-            fontSize="3xl"
-            _before={{ content: `"/"`, color: "org.red", paddingRight: "3" }}
-          >
+          <Heading as="h2" textStyle="h2" fontSize="3xl">
             About
           </Heading>
           <Text mt="4" fontSize="lg" lineHeight={1.8}>
@@ -66,29 +61,11 @@ export default function Home() {
             主な関心、興味はフロントエンドにありますが固執しすぎず、幅広く学習していきたいと思っています📚
           </Text>
         </Box>
-        <Box pl={12} width="100%">
+        <Box pl={12} w="100%">
           <VStack mt={12} alignItems="flex-start" spacing={16}>
             {introData.map((item) => (
               <Box key={item.title} w="100%">
-                <Heading
-                  as="h2"
-                  textStyle="h2"
-                  fontSize="2xl"
-                  _before={{
-                    content: `"#"`,
-                    color: "org.cyan",
-                    paddingRight: "3",
-                  }}
-                  _after={{
-                    position: "absolute",
-                    top: "calc(50% - 1px)",
-                    right: 0,
-                    content: `""`,
-                    height: "1px",
-                    width: { base: "0px", sm: "40%" },
-                    backgroundColor: "org.cyan",
-                  }}
-                >
+                <Heading as="h3" textStyle="h3" fontSize="2xl">
                   {item.title}
                 </Heading>
                 <Text mt={4} fontSize="lg">
@@ -99,15 +76,10 @@ export default function Home() {
           </VStack>
         </Box>
       </VStack>
-      <Divider textAlign="center" m={"6rem auto 3rem auto"} width={40} />
+      <Divider textAlign="center" m={"6rem auto 3rem auto"} w={40} />
       <VStack as="section" alignItems="left">
         <Box mt={12}>
-          <Heading
-            as="h2"
-            textStyle="h2"
-            fontSize="3xl"
-            _before={{ content: `"/"`, color: "org.navy", paddingRight: "3" }}
-          >
+          <Heading as="h2" textStyle="h2" fontSize="3xl">
             Work
           </Heading>
           <Text mt="4" mb="6" fontSize="lg">
