@@ -13,12 +13,18 @@ class MyDocument extends Document {
             property="description"
             content="三木のポートフォリオ。これを見れば全てがわかる。"
           />
-          <meta property="og:title" content="" />
-          <meta property="og:description" content="" />
-          <meta property="og:site_name" content="" />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon.png"
+          />
+          <meta property="og:title" content="RM Portfolio" />
+          <meta property="og:description" content="rmのポートフォリオです。" />
+          <meta property="og:site_name" content="RM Portfolio" />
           <meta
             property="og:image"
-            content={`${process.env.SITE_URL}/ogp_large.png`}
+            content={`${process.env.SITE_URL}/images/avatar.png`}
           />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
