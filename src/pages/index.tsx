@@ -1,15 +1,33 @@
-import { Box, Divider, Heading, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Heading,
+  IconButton,
+  useColorMode,
+  VStack,
+} from "@chakra-ui/react";
+import { BsSunFill, BsMoonFill } from "react-icons/bs";
 import { Footer } from "components/Footer";
 import { HeadlineArea } from "components/HeadlineArea";
 import { Introduction } from "components/Introduction";
 import { Profile } from "components/Profile";
-import { ProjectList } from "components/ProjectList";
+// import { ProjectList } from "components/ProjectList";
 import { flashAnimation } from "styles/animation";
 
 export default function Home() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <>
-      <Box as="section" textAlign="center">
+      <Box as="section" textAlign="center" position="relative">
+        <IconButton
+          mb={10}
+          aria-label="DarkMode Switch"
+          icon={colorMode === "light" ? <BsMoonFill /> : <BsSunFill />}
+          onClick={toggleColorMode}
+          position="absolute"
+          right={0}
+        />
         <Heading
           as="h1"
           textStyle="h1"
@@ -63,7 +81,7 @@ export default function Home() {
           />
         </Box>
         <VStack pt="8" spacing={20}>
-          <ProjectList />
+          {/* <ProjectList /> */}
         </VStack>
       </VStack>
       <Footer />

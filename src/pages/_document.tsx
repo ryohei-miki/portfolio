@@ -1,3 +1,4 @@
+import { ColorModeScript, theme } from "@chakra-ui/react";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -29,6 +30,7 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <body>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
