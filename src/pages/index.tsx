@@ -20,14 +20,17 @@ export default function Home() {
   return (
     <>
       <Box as="section" textAlign="center" position="relative">
-        <IconButton
-          mb={10}
-          aria-label="DarkMode Switch"
-          icon={colorMode === "light" ? <BsMoonFill /> : <BsSunFill />}
-          onClick={toggleColorMode}
+        <Box
           position="absolute"
-          right={0}
-        />
+          display={{ base: "none", sm: "block" }}
+          left={0}
+        >
+          <IconButton
+            aria-label="DarkMode Switch"
+            icon={colorMode === "light" ? <BsMoonFill /> : <BsSunFill />}
+            onClick={toggleColorMode}
+          />
+        </Box>
         <Heading
           as="h1"
           textStyle="h1"
@@ -70,7 +73,13 @@ export default function Home() {
           </VStack>
         </Box>
       </VStack>
-      <Divider textAlign="center" m={"6rem auto 3rem auto"} w={40} />
+      <Divider
+        textAlign="center"
+        m={"6rem auto 3rem auto"}
+        w={40}
+        size="md"
+        borderColor="org.grey"
+      />
       <VStack as="section" alignItems="left" mb={20}>
         <Box mt={12}>
           <HeadlineArea
