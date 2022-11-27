@@ -19,11 +19,17 @@ const theme = extendTheme({
       cyan: "#7CDBCB",
       red: "#E43777",
       navy: "#574EC1",
+      grey: "#CECECE",
     },
   },
   components: {
     Divider: {
-      size: "3px",
+      defaultProps: { size: "md" },
+      sizes: {
+        lg: { borderWidth: "4px" },
+        md: { borderWidth: "2px" },
+        sm: { borderWidth: "1px" },
+      },
     },
   },
   fonts: {
