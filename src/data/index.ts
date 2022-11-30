@@ -1,7 +1,7 @@
 export const introData = [
   {
     title: "Skill",
-    text: "Javascript, React, Next.js, ruby, Ruby on Rails",
+    text: "Javascript, React, Next.js, Ruby, Ruby on Rails",
   },
   {
     title: "Device",
