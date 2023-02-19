@@ -4,7 +4,7 @@ import { SiGithub, SiTwitter, SiZenn } from "react-icons/si";
 
 export const snsData = [
   {
-    url: "https://github.com/RyoheiMiki",
+    url: "https://github.com/ryohei-miki",
     icon: <SiGithub size={26} />,
   },
   {
