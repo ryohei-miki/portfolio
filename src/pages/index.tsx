@@ -95,7 +95,7 @@ export default function Home() {
         </Box>
         <HStack wrap={"wrap"} pt="8" justifyContent={"space-between"}>
           <Grid templateColumns="repeat(2, 1fr)" gap={5}>
-            <WorkList />
+            <WorkList colorMode={colorMode} />
           </Grid>
         </HStack>
       </VStack>

@@ -2,15 +2,16 @@ import {
   Card,
   CardBody,
   Heading,
-  Stack,
-  Image,
-  Text,
   Link,
   Tag,
   VStack,
   Box,
 } from "@chakra-ui/react";
 import React from "react";
+
+type Props = {
+  colorMode: string;
+};
 
 export const worksData = [
   {
@@ -25,27 +26,31 @@ export const worksData = [
   },
 ];
 
-export const WorkList: React.FC = () => (
-  <>
-    {worksData.map((item) => (
-      <Link key={item.link} target="_blank" href={item.link}>
-        <Card border="none" boxShadow="none" w={340} h={160}>
-          <CardBody
-            display={"flex"}
-            flexDirection={"column"}
-            justifyContent={"space-between"}
-          >
-            <VStack alignItems={"flex-start"}>
-              <Heading size="md">{item.title}</Heading>
-            </VStack>
-            <Box>
-              <Tag size={"md"} colorScheme="teal">
-                {item.tag}
-              </Tag>
-            </Box>
-          </CardBody>
-        </Card>
-      </Link>
-    ))}
-  </>
-);
+export const WorkList: React.FC<Props> = ({ colorMode }) => {
+  const bgColor = colorMode === "dark" ? "gray.700" : "gray.100";
+
+  return (
+    <>
+      {worksData.map((item) => (
+        <Link key={item.link} target="_blank" href={item.link}>
+          <Card bg={bgColor} border="none" boxShadow="none" w={340} h={160}>
+            <CardBody
+              display={"flex"}
+              flexDirection={"column"}
+              justifyContent={"space-between"}
+            >
+              <VStack alignItems={"flex-start"}>
+                <Heading size="md">{item.title}</Heading>
+              </VStack>
+              <Box>
+                <Tag size={"md"} colorScheme="teal">
+                  {item.tag}
+                </Tag>
+              </Box>
+            </CardBody>
+          </Card>
+        </Link>
+      ))}
+    </>
+  );
+};
