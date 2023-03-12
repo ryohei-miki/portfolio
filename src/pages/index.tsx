@@ -1,7 +1,9 @@
 import {
   Box,
   Divider,
+  Grid,
   Heading,
+  HStack,
   IconButton,
   useColorMode,
   VStack,
@@ -91,9 +93,11 @@ export default function Home() {
             }
           />
         </Box>
-        <VStack pt="8" spacing={20}>
-          <WorkList />
-        </VStack>
+        <HStack wrap={"wrap"} pt="8" justifyContent={"space-between"}>
+          <Grid templateColumns="repeat(2, 1fr)" gap={5}>
+            <WorkList />
+          </Grid>
+        </HStack>
       </VStack>
       <Footer />
     </>
