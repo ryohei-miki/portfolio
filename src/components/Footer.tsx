@@ -3,6 +3,6 @@ import React from "react";
 
 export const Footer: React.FC = () => (
   <Box as="footer" textAlign="center" fontSize="sm">
-    <Text>© 2022 Ryohei Miki. All Rights Reserved.</Text>
+    <Text>© 2023 Ryohei Miki. All Rights Reserved.</Text>
   </Box>
 );

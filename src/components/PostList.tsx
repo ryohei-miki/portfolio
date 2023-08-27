@@ -13,7 +13,7 @@ type Props = {
   colorMode: string;
 };
 
-export const worksData = [
+export const postsData = [
   {
     title: "〇〇くん！ここのバグ修正しといて！と言われた時にやること",
     link: "https://zenn.dev/rm/articles/ba59cf35f9656d",
@@ -26,12 +26,12 @@ export const worksData = [
   },
 ];
 
-export const WorkList: React.FC<Props> = ({ colorMode }) => {
+export const PostList: React.FC<Props> = ({ colorMode }) => {
   const bgColor = colorMode === "dark" ? "gray.700" : "gray.100";
 
   return (
     <>
-      {worksData.map((item) => (
+      {postsData.map((item) => (
         <Link key={item.link} target="_blank" href={item.link}>
           <Card bg={bgColor} border="none" boxShadow="none" w={340} h={160}>
             <CardBody
@@ -48,7 +48,7 @@ export const WorkList: React.FC<Props> = ({ colorMode }) => {
                 </Tag>
               </Box>
             </CardBody>
-          </Card>
+          </Card>s
         </Link>
       ))}
     </>

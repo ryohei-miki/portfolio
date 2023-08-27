@@ -13,8 +13,8 @@ import { BsSunFill, BsMoonFill } from "react-icons/bs";
 import { Footer } from "@/components/Footer";
 import { HeadlineArea } from "@/components/HeadlineArea";
 import { Introduction } from "@/components/Introduction";
+import { PostList } from "@/components/PostList";
 import { Profile } from "@/components/Profile";
-import { WorkList } from "@/components/WorkList";
 import { flashAnimation } from "@/styles/animation";
 
 export default function Home() {
@@ -87,7 +87,7 @@ export default function Home() {
       <VStack as="section" alignItems="left" mb={20}>
         <Box mt={12}>
           <HeadlineArea
-            heading="Work"
+            heading="Posts"
             description={
               <>日々のアウトプットの成果物をここに載せていきます。</>
             }
@@ -95,7 +95,7 @@ export default function Home() {
         </Box>
         <HStack wrap={"wrap"} pt="8" justifyContent={"space-between"}>
           <Grid templateColumns="repeat(2, 1fr)" gap={5}>
-            <WorkList colorMode={colorMode} />
+            <PostList colorMode={colorMode} />
           </Grid>
         </HStack>
       </VStack>

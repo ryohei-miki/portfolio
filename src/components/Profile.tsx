@@ -6,7 +6,7 @@ export const Profile: React.FC = () => {
   return (
     <>
       <Box>
-        <Avatar w={40} h={40} src="../../images/avatar.png" />
+        <Avatar w={40} h={40} src="/images/avatar.png" />
       </Box>
       <HStack spacing={8} justifyContent="center" mt="8">
         <SnsLinks />

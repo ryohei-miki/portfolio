@@ -8,12 +8,12 @@ export const snsData = [
     icon: <SiGithub size={26} />,
   },
   {
-    url: "https://twitter.com/rm_oshushi",
-    icon: <SiTwitter size={26} />,
-  },
-  {
     url: "https://zenn.dev/rm",
     icon: <SiZenn size={26} />,
+  },
+  {
+    url: "https://twitter.com/rm_oshushi",
+    icon: <SiTwitter size={26} />,
   },
 ];
 
