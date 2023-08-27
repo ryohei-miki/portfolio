@@ -48,7 +48,7 @@ export const PostList: React.FC<Props> = ({ colorMode }) => {
                 </Tag>
               </Box>
             </CardBody>
-          </Card>s
+          </Card>
         </Link>
       ))}
     </>
